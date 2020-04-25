@@ -1,0 +1,13 @@
+{
+ :duct.profile/base {:duct.core/project-ns example
+                     :example.handler/index #ig/ref :duct/logger} 
+ 
+ :duct.module/ataraxy {"/" [:index]}
+                       
+ :duct.module/logging {}
+ :duct.module.web/site {}
+ 
+ :duct.profile/dev   #duct/include "dev"
+ :duct.profile/local #duct/include "local"
+ :duct.profile/prod  {}
+} 

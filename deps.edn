@@ -1,0 +1,14 @@
+{:paths ["src" "resources"]
+ :deps {org.clojure/clojure {:mvn/version "1.10.1"}
+        duct/core {:mvn/version "0.8.0"}
+        duct/module.ataraxy {:mvn/version "0.3.0"}
+        duct/module.logging {:mvn/version "0.4.0"}
+        duct/module.web {:mvn/version "0.7.0"}}
+ :aliases {:dev {:extra-paths ["dev/src" "dev/resources" "test"]
+                 :extra-deps {integrant/repl {:mvn/version "0.3.1"}
+                              eftest {:mvn/version "0.5.7"}
+                              org.clojure/test.check {:mvn/version "0.10.0"}
+                              hawk {:mvn/version "0.2.11"}}}
+           :test-runner {:main-opts ["scripts/run_tests.clj"]}
+           :rebel-repl {:extra-deps {com.bhauman/rebel-readline {:mvn/version "0.1.4"}}
+                        :main-opts  ["-m" "rebel-readline.main"]}}}
